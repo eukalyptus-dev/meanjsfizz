@@ -1,3 +1,25 @@
 <section data-ng-controller="HomeController">
-
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6" ng-repeat="example in examples">
+				<div class="row">
+					<div class="col-xs-4">
+						<h1 class="pull-right">
+							<button type="button" class="btn" ng-class="'btn-' + example.color">
+								<span class="glyphicon" ng-class="'glyphicon-' + example.icon"></span>
+							</button>
+						</h1>
+					</div>
+					<div class="col-xs-8">
+						<h1>{{example.name}}</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-8 col-xs-offset-4">
+						<strong class="text-muted">{{example.description}}</strong>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>

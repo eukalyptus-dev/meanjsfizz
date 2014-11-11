@@ -59,7 +59,7 @@ angular.module('core').service('Menus', [
 		this.addMenu = function(menuId, isPublic, roles) {
 			// Create the new menu
 			this.menus[menuId] = {
-				isPublic: isPublic || false,
+				isPublic: isPublic || true,
 				roles: roles || this.defaultRoles,
 				items: [],
 				shouldRender: shouldRender
