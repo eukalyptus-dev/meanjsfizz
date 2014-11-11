@@ -1,0 +1,48 @@
+<section data-ng-controller="FizzBuzzController">
+
+	<button type="button" title="Close" class="btn btn-closemodal" ng-click="$close()">
+		<span aria-hidden="true"><strong class="text-muted">&times;</strong></span>
+		<span class="hide">Close</span>
+	</button>
+	<div class="row">
+
+		<div class="jumbotron">
+			<form class="col-sm-6" role="form">
+				<h3>Classic FizzBuzz Test</h3>
+				<br/>
+				<a class="btn btn-primary form-control" role="button" ng-click="fizztxt=savetxt(fizzBuzz())">Generate output.txt</a>
+				<br/><br/>
+				<textarea class="form-control" rows="13" ng-model="fizztxt">
+
+				</textarea>
+			</form>
+			<br/>
+
+			<pre class="col-sm-6" rows="10">
+$scope.fizzBuzz = function(init, end, checks) {
+	var init = init || 1;
+	var end = end || 100;
+	var checks = checks || [[3*5, 3, 5],['FizzBuzz','Fizz','Buzz']];
+	var list = [];
+	for (var n = init; n <= end; n++) {
+		var aux = n;
+		for (var i = 0; i < checks[0].length; i++) {
+			if (n % checks[0][i] == 0) {
+				aux = checks[1][i];
+				break;
+			}
+		}
+		list.push(n + ':\t' + aux);
+	}
+	var output = list.join('\r\n');
+	console.clear();
+	console.log(output);
+	return output;
+}</pre>
+
+		</div>
+
+
+	</div>
+
+</section>

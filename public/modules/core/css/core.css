@@ -16,3 +16,42 @@
 body {
 	background-color: #eee;
 }
+
+.app-modal-window .modal-dialog {
+	width: 100%;
+}
+
+.app-modal-window .modal-dialog .modal-content {
+	background: none;
+	box-shadow: none;
+	border: none;
+}
+
+.app-modal-window .btn-closemodal {
+	position: absolute;
+	top: 0;
+	right: -15px;
+	padding: 0;
+	border-radius: 6px;
+	width: 32px;
+	height: 32px;
+	color: black;
+	text-align: center;
+	font-size: 16px;
+}
+.app-modal-window .btn-closemodal:not(:hover) {
+	background: none;
+}
+
+.app-modal-window .jumbotron {
+	overflow:auto;
+}
+
+.app-modal-window pre {
+	height: 25pc;
+	overflow-y: scroll;
+}
+
+.app-modal-window textarea {
+	overflow-y: scroll;
+}
