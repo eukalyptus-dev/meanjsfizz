@@ -12,7 +12,9 @@
 				<br/>
 				<a class="btn btn-primary form-control" role="button" ng-click="fizztxt=savetxt(fizzBuzz())">Generate output.txt</a>
 				<br/><br/>
-				<textarea class="form-control" rows="13" ng-model="fizztxt">
+
+				<label class="sr-only" for="fizzoutputtxt">fizzoutputtxt</label>
+				<textarea id="fizzoutputtxt" class="form-control" rows="13" ng-model="fizztxt">
 
 				</textarea>
 			</form>
@@ -20,9 +22,9 @@
 
 			<pre class="col-sm-6" rows="10">
 $scope.fizzBuzz = function(init, end, checks) {
-	var init = init || 1;
-	var end = end || 100;
-	var checks = checks || [[3*5, 3, 5],['FizzBuzz','Fizz','Buzz']];
+	init = init || 1;
+	end = end || 100;
+	checks = checks || [[3*5, 3, 5],['FizzBuzz','Fizz','Buzz']];
 	var list = [];
 	for (var n = init; n <= end; n++) {
 		var aux = n;

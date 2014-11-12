@@ -28,6 +28,6 @@ angular.module('fibonacci').controller('FibonacciController', ['$scope',
 			console.log(output);
 			return output;
 
-		}
+		};
 	}
 ]);

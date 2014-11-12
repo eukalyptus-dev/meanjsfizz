@@ -40,10 +40,10 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 
 			var a = window.document.createElement('a');
 			// Append anchor to body.
-			document.body.appendChild(a)
+			document.body.appendChild(a);
 			a.href = "#";
 			a.setAttribute('download', filename);
-			var blobObject = new Blob([content], {type: 'text/plain'})
+			var blobObject = new Blob([content], {type: 'text/plain'});
 			a.href = window.URL.createObjectURL(blobObject);
 			if (window.navigator.msSaveOrOpenBlob) {
 				window.navigator.msSaveOrOpenBlob(blobObject, filename);
@@ -55,6 +55,6 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 			document.body.removeChild(a);
 
 			return content;
-		}
+		};
 	}
 ]);
