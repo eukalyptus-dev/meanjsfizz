@@ -7,9 +7,9 @@ angular.module('fizz-buzz').controller('FizzBuzzController', ['$scope',
 		$scope.savetxt = window.savetxt;
 
 		$scope.fizzBuzz = function(init, end, checks) {
-			var init = init || 1;
-			var end = end || 100;
-			var checks = checks || [[3*5, 3, 5],['FizzBuzz','Fizz','Buzz']];
+			init = init || 1;
+			end = end || 100;
+			checks = checks || [[3*5, 3, 5],['FizzBuzz','Fizz','Buzz']];
 			var list = [];
 			for (var n = init; n <= end; n++) {
 				var aux = n;
