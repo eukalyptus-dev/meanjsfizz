@@ -54,6 +54,8 @@ module.exports = function(db) {
 		level: 9
 	}));
 
+	app.use(express.static(__dirname + '/assets'));
+
 	// Showing stack errors
 	app.set('showStackError', true);
 

@@ -30,6 +30,23 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 			}
 		];
 
+		$scope.resumes = [
+			{
+				name: 'Resume',
+				description: 'My Infographic Resume in English',
+				icon: 'user',
+				color: 'primary',
+				route: '/assets/resume.pdf'
+			},
+			{
+				name: 'Curriculum',
+				description: 'Mi Hoja de Vida Infográfica en Español',
+				icon: 'user',
+				color: 'warning',
+				route: '/assets/curriculum.pdf'
+			}
+		];
+
 		$scope.go = function ( path ) {
 			$location.path( path );
 		};
