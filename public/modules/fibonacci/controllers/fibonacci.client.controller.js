@@ -5,6 +5,7 @@ angular.module('fibonacci').controller('FibonacciController', ['$scope',
 		// Controller Logic
 		// ...
 		$scope.savetxt = window.savetxt;
+		$scope.js_beautify = window.js_beautify;
 
 		$scope.fibo = function(n) {
 			n = n || 0;
@@ -22,12 +23,10 @@ angular.module('fibonacci').controller('FibonacciController', ['$scope',
 					series.push(i + ':\t' + a1);
 				}
 			}
-
 			var output = series.join('\r\n');
 			console.clear();
 			console.log(output);
 			return output;
-
 		};
 	}
 ]);

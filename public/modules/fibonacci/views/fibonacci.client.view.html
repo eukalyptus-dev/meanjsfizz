@@ -3,54 +3,20 @@
 		<span aria-hidden="true"><strong class="text-muted">&times;</strong></span>
 		<span class="hide">Close</span>
 	</button>
-	<div class="row">
 
-		<div class="jumbotron">
-			<form class="col-sm-6" role="form">
+	<div class="jumbotron">
+		<form class="form-inline" role="form">
+			<span class="col-sm-6">
 				<h3>Plain Fibonacci Sequence Generator</h3>
-				<br/>
-				<input type="number" class="form-control" placeholder="Length of the Fibonacci Series" min="0" max="999" required ng-model="nFibo" style="width:250px">
-				<br/>
-				<a class="btn btn-primary form-control" role="button" ng-click="fibotxt=savetxt(fibo(nFibo))">Generate output.txt</a>
+				<input type="number" class="form-control col2" placeholder="Length of the Fibonacci Series" min="0" max="999" required ng-model="nFibo"">
+				<a class="btn btn-primary form-control col2" role="button" ng-click="fibotxt=savetxt(fibo(nFibo))">Generate output.txt</a>
 				<br/><br/>
-				<textarea class="form-control" rows="11" ng-model="fibotxt">
-
-				</textarea>
-			</form>
-			<br/>
-
-			<pre class="col-sm-6" rows="10">
-$scope.fibo = function(n) {
-	n = n || 0;
-	var series = [], i = 0;
-	if (n >= 0) {
-		var a1 = 0,
-			a2 = 1,
-			aux;
-		series.push(i + ':\t' + a1);
-		while (n-- > 0) {
-			i++;
-			aux = a1;
-			a1 = a2;
-			a2 += aux;
-			series.push(i + ':\t' + a1);
-		}
-	}
-
-	var output = series.join('\r\n');
-	console.clear();
-	console.log(output);
-	return output;
-
-}</pre>
-
-		</div>
-
-
+				<textarea class="form-control col1" rows="15" ng-model="fibotxt"></textarea>
+			</span>
+			<span class="col-sm-6">
+				<pre>{{js_beautify('$scope.fibo = ' + fibo.toString())}}</pre>
+			</span>
+		</form>
 	</div>
-
-
-
-
 
 </section>

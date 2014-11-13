@@ -17,20 +17,61 @@ body {
 	background-color: #eee;
 }
 
+.col1 {
+	width: 100% !important;
+	margin-left: -1px;
+	margin-right: -1px;
+}
+.col2 {
+	width: 50% !important;
+	margin-left: -1px;
+	margin-right: -1px;
+}
+.col3 {
+	width: 33% !important;
+	margin-left: -1px;
+	margin-right: -1px;
+}
+.col4 {
+	width: 25% !important;
+	margin-left: -1px;
+	margin-right: -1px;
+}
+.col5 {
+	width: 20% !important;
+	margin-left: -1px;
+	margin-right: -1px;
+}
+.col6 {
+	width: 16.5% !important;
+	margin-left: -1px;
+	margin-right: -1px;
+}
+.floatleft {
+	float: left;
+}
+
 .app-modal-window .modal-dialog {
 	width: 100%;
 }
 
-.app-modal-window .modal-dialog .modal-content {
-	background: none;
-	box-shadow: none;
-	border: none;
+
+/*.app-modal-window .modal-dialog .modal-content {*/
+	/*background: none;*/
+	/*box-shadow: none;*/
+	/*border: none;*/
+/*}*/
+
+.app-modal-window .jumbotron{
+	margin: 0;
+	overflow: auto;
 }
+
 
 .app-modal-window .btn-closemodal {
 	position: absolute;
 	top: 0;
-	right: -15px;
+	right: 0;
 	padding: 0;
 	border-radius: 6px;
 	width: 32px;
@@ -38,17 +79,14 @@ body {
 	color: black;
 	text-align: center;
 	font-size: 16px;
+	z-index: 5000;
 }
 .app-modal-window .btn-closemodal:not(:hover) {
 	background: none;
 }
 
-.app-modal-window .jumbotron {
-	overflow:auto;
-}
-
 .app-modal-window pre {
-	height: 25pc;
+	height: 26.5pc;
 	overflow-y: scroll;
 }
 

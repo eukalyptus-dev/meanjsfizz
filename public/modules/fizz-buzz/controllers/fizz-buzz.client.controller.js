@@ -5,6 +5,7 @@ angular.module('fizz-buzz').controller('FizzBuzzController', ['$scope',
 		// Controller Logic
 		// ...
 		$scope.savetxt = window.savetxt;
+		$scope.js_beautify = window.js_beautify;
 
 		$scope.fizzBuzz = function(init, end, checks) {
 			init = init || 1;

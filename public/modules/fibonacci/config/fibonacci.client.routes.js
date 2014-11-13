@@ -9,10 +9,11 @@ angular.module('fibonacci').config(['$stateProvider',
 				url: '/fibonacci',
 				templateUrl: 'modules/core/views/home.client.view.html',
 
-				onEnter: ['$stateParams', '$state', '$modal', '$resource', function($stateParams, $state, $modal, $resource) {
+				onEnter: ['$stateParams', '$state', '$modal', function($stateParams, $state, $modal) {
 					$modal.open({
 						windowClass: 'app-modal-window container',
 						backdrop: 'static',
+						size: 'lg',
 						templateUrl: 'modules/fibonacci/views/fibonacci.client.view.html',
 						resolve: {
 							item: function() {}
