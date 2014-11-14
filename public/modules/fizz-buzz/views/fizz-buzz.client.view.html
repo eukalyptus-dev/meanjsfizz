@@ -9,10 +9,11 @@
 		<form class="form-inline" role="form">
 		<span class="col-sm-6">
 			<h3>Classic FizzBuzz Test</h3>
-			<a class="btn btn-primary form-control col1" role="button" ng-click="fizztxt=savetxt(fizzBuzz())">Generate output.txt</a>
+			<div class="col1 clearfix">
+				<a class="btn btn-primary form-control col1 floatleft" role="button" ng-click="fizztxt=savetxt(fizzBuzz())">Output</a>
+			</div>
 			<br/>
-			<br/>
-			<textarea id="fizzoutputtxt" class="form-control col1" rows="15" ng-model="fizztxt"></textarea>
+			<textarea id="fizzoutputtxt" class="form-control col1 clearfix" rows="15" ng-model="fizztxt"></textarea>
 		</span>
 		<span class="col-sm-6">
 			<pre>{{js_beautify('$scope.fizzBuzz = ' + fizzBuzz.toString())}}</pre>

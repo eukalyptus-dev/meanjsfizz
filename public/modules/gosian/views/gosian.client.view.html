@@ -6,23 +6,26 @@
 	</button>
 
 	<div class="jumbotron">
-		<form role="form" class="form-inline">
+		<form role="form" class="form">
 			<span class="col-sm-6">
 				<h3 class="clearfix">Linear Algebra Gaussian Elimination</h3>
-				<input type="number" class="form-control col3" placeholder="# of Equations" min="2" max="5" required ng-model="m" ng-change="regen()">
-				<input type="number" class="form-control col3" placeholder="# of Variables" min="2" max="5" required ng-model="n" ng-change="regen()">
-				<a class="btn btn-primary form-control col3 clearfix" role="button" ng-click="gosiantxt=savetxt(doGosian())">Generate output.txt</a>
-				<div ng-repeat="cell in matA[0] track by $index" class="floatleft text-center" ng-class="'col' + (n+1)" ng-if="m>=2 && m<=5 && n>=2 && n<=5">
-					{{$index === 0 ? '[&nbsp;&nbsp;&nbsp;]X' + ($index+1) : '+&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;&nbsp;]X' + ($index+1)}}
+				<div class="col1 clearfix">
+					<input type="number" class="form-control col3 floatleft" placeholder="rows" min="2" max="5" required ng-model="m" ng-change="regen()">
+					<input type="number" class="form-control col3 floatleft" placeholder="vars" min="2" max="5" required ng-model="n" ng-change="regen()">
+					<a class="btn btn-primary form-control col3 clearfix floatleft" role="button" ng-click="gosiantxt=savetxt(doGosian())">Output</a>
 				</div>
-				<div class="floatleft text-center" ng-class="'col' + (n+1)" ng-if="m>=2 && m<=5 && n>=2 && n<=5">
-					=&nbsp;&nbsp;&nbsp;Const
+				<div class="col1 clearfix">
+					<div ng-repeat="cell in matA[0] track by $index" class="floatleft text-center" ng-class="'col' + (n+1)" ng-if="m>=2 && m<=5 && n>=2 && n<=5">
+						{{$index === 0 ? '[ ]X' + ($index+1) : '+ [ ]X' + ($index+1)}}
+					</div>
+					<div class="floatleft text-center" ng-class="'col' + (n+1)" ng-if="m>=2 && m<=5 && n>=2 && n<=5">
+						=Const
+					</div>
 				</div>
-				<div ng-repeat="row in matA track by $index" class="col1 row floatleft clearfix" ng-if="m>=2 && m<=5 && n>=2 && n<=5">
-					<input ng-repeat="cell in row track by $index" type="number" class="form-control floatleft" ng-class="'col' + (n+1)" placeholder="{{'A' + ($index+1)}}" min="-10" max="10" required ng-model="matA[$parent.$index][$index]">
-					<input type="number" class="form-control floatleft" ng-class="'col' + (n+1)" placeholder="{{'Const'}}" min="-10" max="10" required ng-model="vecB[$index]">
+				<div ng-repeat="row in matA track by $index" class="col1 floatleft clearfix" ng-if="m>=2 && m<=5 && n>=2 && n<=5">
+					<input ng-repeat="cell in row track by $index" type="number" class="form-control floatleft killpad" ng-class="'col' + (n+1)" placeholder="{{'A' + ($index+1)}}" min="-10" max="10" required ng-model="matA[$parent.$index][$index]">
+					<input type="number" class="form-control floatleft killpad" ng-class="'col' + (n+1)" placeholder="{{'Const'}}" min="-10" max="10" required ng-model="vecB[$index]">
 				</div>
-
 				<textarea id="gosianoutputtxt" class="form-control col1 floatleft" rows="{{12 - m}}" ng-model="gosiantxt"></textarea>
 			</span>
 			<span class="col-sm-6">

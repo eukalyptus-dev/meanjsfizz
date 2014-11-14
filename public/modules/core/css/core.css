@@ -19,33 +19,25 @@ body {
 
 .col1 {
 	width: 100% !important;
-	margin-left: -1px;
-	margin-right: -1px;
 }
 .col2 {
-	width: 50% !important;
-	margin-left: -1px;
-	margin-right: -1px;
+	width: 49.5% !important;
 }
 .col3 {
-	width: 33% !important;
-	margin-left: -1px;
-	margin-right: -1px;
+	width: 33.33% !important;
 }
 .col4 {
 	width: 25% !important;
-	margin-left: -1px;
-	margin-right: -1px;
 }
 .col5 {
 	width: 20% !important;
-	margin-left: -1px;
-	margin-right: -1px;
 }
 .col6 {
-	width: 16.5% !important;
-	margin-left: -1px;
-	margin-right: -1px;
+	width: 16.66% !important;
+}
+.killpad {
+	padding-left: 0;
+	padding-right: 0;
 }
 .floatleft {
 	float: left;

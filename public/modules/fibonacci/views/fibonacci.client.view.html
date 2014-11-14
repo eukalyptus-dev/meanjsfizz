@@ -8,10 +8,12 @@
 		<form class="form-inline" role="form">
 			<span class="col-sm-6">
 				<h3>Plain Fibonacci Sequence Generator</h3>
-				<input type="number" class="form-control col2" placeholder="Length of the Fibonacci Series" min="0" max="999" required ng-model="nFibo"">
-				<a class="btn btn-primary form-control col2" role="button" ng-click="fibotxt=savetxt(fibo(nFibo))">Generate output.txt</a>
-				<br/><br/>
-				<textarea class="form-control col1" rows="15" ng-model="fibotxt"></textarea>
+				<div class="col1 clearfix">
+					<input type="number" class="form-control col2 floatleft" placeholder="length" min="0" max="999" required ng-model="nFibo"">
+					<a class="btn btn-primary form-control col2 floatleft" role="button" ng-click="fibotxt=savetxt(fibo(nFibo))">Output</a>
+				</div>
+				<br/>
+				<textarea class="form-control col1 clearfix" rows="15" ng-model="fibotxt"></textarea>
 			</span>
 			<span class="col-sm-6">
 				<pre>{{js_beautify('$scope.fibo = ' + fibo.toString())}}</pre>
